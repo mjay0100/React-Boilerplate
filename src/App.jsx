@@ -1,14 +1,22 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import SingleCocktail from "./Pages/SingleCocktail";
+import Error from "./Pages/Error";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
-      <h1 class="text-3xl text-center text-red-500 font-bold underline">
-        Hello world!
-      </h1>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/cocktail/:id" element={<SingleCocktail />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </Router>
   );
 }
 
