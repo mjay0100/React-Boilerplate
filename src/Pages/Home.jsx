@@ -1,7 +1,6 @@
 import React from "react";
-import { useGlobal } from "../Context";
-import Search_form from "./Components/Search_form";
-import List from "./Components/List";
+import Search_form from "../Components/Search_form";
+import List from "../Components/List";
 const Home = () => {
   return (
     <div>
