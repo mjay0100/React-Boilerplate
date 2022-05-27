@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { useGlobal } from "../Context";
 
 const List = () => {
-  return (
-    <div>List</div>
-  )
-}
+  const { loading } = useGlobal();
+  if (loading) {
+    return (
+      <h1 className="text-4xl text-center text-red-500 capitalize">
+        loading...
+      </h1>
+    );
+  }
+  return <div>List</div>;
+};
 
-export default List
+export default List;
