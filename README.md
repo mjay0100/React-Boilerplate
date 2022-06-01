@@ -1,3 +1,3 @@
-# React-Boilerplate
+#The Cocktail Search App.
 
-A simple react boilerplate using tailwindcss that can simply be cloned and used immediately. The project folder can be changed to desired project name :) .
+Displays a list of cocktails and provides a search form to look for your favourite cocktail :).
